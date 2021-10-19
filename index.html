@@ -5,8 +5,25 @@
     <meta name="viewport" content="width=device-width">
     <title>repl.it</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+		<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+		
   </head>
   <body>
-    <script src="script.js"></script>
+		<a-scene>	
+		<a-assets>
+			<img id="brick" src="assests/bricks.jpg">
+   		<img id="wood"	src="assests/lolol.jpg">
+			<img id="sky"		src="assests/sky.jpg">
+		</a-assets>
+		<a-sky src="#sky"></a-sky>
+
+
+
+    <a-plane id="floor" position="0 0 0" rotation="-90 0 0" scale = "50 50 50" repeat= "5 4 0" side="double" src="#wood"></a-plane>
+    <a-plane position="0 2.5 -25" scale = "50 5 30" repeat= "2 1 0" side="double" src="#brick"></a-plane>
+    <a-plane position="25 2.5 0" rotation="0 -90 0" repeat= "2 1 0" side="double" src="#brick" scale = "50 5 30"></a-plane>
+    <a-plane position="0 2.5 25" rotation="0 180 0" repeat= "2 1 0" side="double" src="#brick" scale = "50 5 30"></a-plane>
+    <a-plane position="-25 2.5 0" rotation="0 90 0" repeat= "2 1 0" side="double" src="#brick" scale = "50 5 30"></a-plane>
+		</a-scene>		
   </body>
 </html>
