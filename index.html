@@ -6,18 +6,21 @@
     <title>repl.it</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
 		<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+		<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v5.0.0/dist/aframe-extras.min.js"></script>
+		<script src="https://unpkg.com/aframe-animation-component@^5.1.2/dist/aframe-animation-component.min.js"></script>
 		
   </head>
   <body>
 		<a-scene>	
 		<a-assets>
-			<img id="brick" src="assests/bricks.jpg">
-   		<img id="wood"	src="assests/lolol.jpg">
-			<img id="sky"		src="assests/sky.jpg">
-		</a-assets>
+			<img id="brick" src="models/bricks.jpg">
+   		<img id="wood"	src="models/lolol.jpg">
+			<img id="sky"		src="models/sky.jpg">
+			<a-asset-item id="sculputre" src="models/scene(3).glb"></a-asset-item>
+		</a-assets>		
+		<a-gltf-model position="0 0 -3" rotation="0 100 0" scale="10 10 10"src="#sculputure"></a-gltf-model>
+		
 		<a-sky src="#sky"></a-sky>
-
-
 
     <a-plane id="floor" position="0 0 0" rotation="-90 0 0" scale = "50 50 50" repeat= "5 4 0" side="double" src="#wood"></a-plane>
     <a-plane position="0 2.5 -25" scale = "50 5 30" repeat= "2 1 0" side="double" src="#brick"></a-plane>
